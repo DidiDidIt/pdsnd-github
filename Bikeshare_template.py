@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-
+# lists created to ease the filtering function
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -175,12 +175,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def stats(df):
-    """
-    Request the user if data needs to be displayed in batched of 5 records.
-    After each batch ask if teh user would like to continue the data view or quit
-    
-    """
+def view_stats_batch(df):
     view_data = input("\nWould you like to view 5 rows of individual trip data? Enter yes or no\n").lower()
     start_loc = 0
     start_loc_to = 5
@@ -201,11 +196,12 @@ def main():
         time.sleep(3.0)
         trip_duration_stats(df)
         time.sleep(3.0)
+        # washington excluded due to lack of data
         if city =="washington":
             print("\nPlease note ! \nNo gender and Birth Year data available for washington")
             df['Birth Year'] = df['Birth Year'].fillna(0.0).astype(int) 
         user_stats(df)
-        stats(df)
+        view_stats_batch(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
