@@ -8,7 +8,7 @@ Created on Tue Sep 12 11:35:56 2023
 import time
 import pandas as pd
 import numpy as np
-
+# lists created to ease the filtering function
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
