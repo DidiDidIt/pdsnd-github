@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Sep 12 11:35:56 2023
-
-@author: tn93101
-"""
-
 import time
 import pandas as pd
 import numpy as np
@@ -183,6 +176,11 @@ def user_stats(df):
     print('-'*40)
 
 def stats(df):
+    """
+    Request the user if data needs to be displayed in batched of 5 records.
+    After each batch ask if teh user would like to continue the data view or quit
+    
+    """
     view_data = input("\nWould you like to view 5 rows of individual trip data? Enter yes or no\n").lower()
     start_loc = 0
     start_loc_to = 5
