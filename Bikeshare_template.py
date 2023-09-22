@@ -203,6 +203,7 @@ def main():
         time.sleep(3.0)
         trip_duration_stats(df)
         time.sleep(3.0)
+        # washington excluded due to lack of data
         if city =="washington":
             print("\nPlease note ! \nNo gender and Birth Year data available for washington")
             df['Birth Year'] = df['Birth Year'].fillna(0.0).astype(int) 
