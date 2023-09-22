@@ -3,7 +3,7 @@
 ### Date created September 22nd 2023
 Include the date you created this project and README file.
 
-### DD's GitHub project using bikeshare python
+### Dieter's bikeshare project on GitHub
 
 ### Description
 This project is meant to learn **gitHub** and use **ReadMe**.
