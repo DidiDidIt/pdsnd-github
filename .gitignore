@@ -1,1 +1,3 @@
 .github/**
+# ignoring data file with csv extension
+.csv
