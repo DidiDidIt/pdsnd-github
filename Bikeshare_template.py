@@ -182,7 +182,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def stats(df):
+def view_stats_batch(df):
     view_data = input("\nWould you like to view 5 rows of individual trip data? Enter yes or no\n").lower()
     start_loc = 0
     start_loc_to = 5
@@ -207,7 +207,7 @@ def main():
             print("\nPlease note ! \nNo gender and Birth Year data available for washington")
             df['Birth Year'] = df['Birth Year'].fillna(0.0).astype(int) 
         user_stats(df)
-        stats(df)
+        view_stats_batch(df)
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
